@@ -15,12 +15,39 @@ unsigned int showMenu(){
 
 void setBikeRaceInfo(Cyclist *cyc){
 
-// TODO: Prompts the user for first and last name
-// along with the start and end times.  For this you may wish to
-// construct a static function that takes in an empty Time structure and then 
-// prompts the user for hours, minutes, and seconds and enters these values into
-// the Time structure, and then returns the loaded structure back to this
-// function, setBikeRaceInfo().  The choice is yours.
+	//Allocate memory for cyclist
+	cyc = (Cyclist*) malloc(52*sizeof(char)+6*sizeof(int));
+
+	// Prompt first and last name
+	printf("Enter cyclist first name: ");
+	fgets("%c", cyc->firstName, stdin);		
+
+	printf("Enter cyclist last name: ");
+	fgets("%c", cyc->lastName, stdin);
+
+	// Prompt Start/End times
+	printf("Enter Start time: ");
+	
+	printf("\tHours: ");
+		fgets("%d", cyc->startTime.hours, stdin);
+	
+	printf("\tMinutes: ");
+		fgets("%d", cyc->startTime.minutes, stdin);
+	
+	printf("\tSeconds: ");
+		fgets("%d", cyc->startTime.seconds, stdin);
+
+	
+	printf("Enter End time: ");
+	
+	printf("\tHours: ");
+		fgets("%d", cyc->endTime.hours, stdin);
+	
+	printf("\tMinutes: ");
+		fgets("%d", cyc->endTime.minutes, stdin);
+	
+	printf("\tSeconds: ");
+		fgets("%d", cyc->endTime.seconds, stdin);
 
 }
 
@@ -28,7 +55,7 @@ void getBikeRaceInfo(Cyclist *cyc){
 
 // TODO: Returns the information stored in the Cyclist structure currently
 // passed into this function and returns the first and last names stored at
-// that location, along with the total elapsed time, which is returned from 
+// that location, along with the total elapsed time, which is returned from
 // the next function
 
 

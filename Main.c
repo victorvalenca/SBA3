@@ -20,13 +20,13 @@ int main(void){
          case SETINFO:
 	    puts("Enter bib number");
 	    scanf("%d", &bibNum);
-            setBikeRaceInfo(); //TODO: Pass pointer to bibNum'd Cyclist as parameter to this function
+            setBikeRaceInfo(&arCyclists[bibNum]);
             break;
 
          case GETINFO:
 	    puts("Enter bib number");
 	    scanf("%d", &bibNum);
-            getBikeRaceInfo(); //TODO: Pass pointer to bibNum'd Cyclist as parameter to this function
+            getBikeRaceInfo(&arCyclists[bibNum]);
             break;
 
          case EXIT:
